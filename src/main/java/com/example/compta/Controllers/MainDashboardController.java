@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.security.Principal;
+import java.util.List;
 
 @Controller
 public class MainDashboardController {
@@ -23,6 +24,10 @@ public class MainDashboardController {
     @Autowired
     ClientRepo clientRepo;
 
+    @GetMapping(value = "/")
+    public String dashboard(){
+        return "redirect:/dashboard/clients";
+    }
     @GetMapping(value = "/dashboard/clients")
     public String clientsSection(Principal principal , Model model , HttpSession session){
         Integer comptable_id= (Integer) session.getAttribute("COMPTABLE_ID");
@@ -52,10 +57,17 @@ public class MainDashboardController {
                 System.out.println(e);
             }
 
-            return "clients";
         }
+        else{
 
-        return "redirect:/dashboard/clients";
+            List<Client> clients = comptableRepo.getByComptable_id((Integer)session.getAttribute("COMPTABLE_ID")).getClients();
+            model.addAttribute("clients",clients);
+            model.addAttribute("ALL_CLIENT",true);
+
+        }
+        return "clients";
+
+
     }
 
     @GetMapping(value = "dashboard/add_client")

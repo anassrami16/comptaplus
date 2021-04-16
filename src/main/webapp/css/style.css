@@ -1,7 +1,7 @@
 :root {
     --primary: #2d45c2;
     --secondary: #a1b1c7a8;
-    --light:#E8F0FE;
+    --light: #e8f0fe;
     --primary-font-color: #374360;
     --secondary-font-color: #a1b1c7;
     --white-font-color: #ffffff;
@@ -9,12 +9,12 @@
     --primary-background: #ffffff;
     --secondary-background: #fafbfb;
     --white: #ffffff;
-    --black : #000000;
+    --black: #000000;
 }
 /*----------------------------------------------------------------------------------------*/
 /*                                      loading page                                      */
 /*----------------------------------------------------------------------------------------*/
-.loading_page{
+.loading_page {
     z-index: 1000;
     position: fixed;
     width: 100%;
@@ -36,8 +36,12 @@
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 body {
@@ -277,7 +281,7 @@ body {
     display: flex;
     justify-content: center;
 }
-.search_button{
+.search_button {
     height: 50px;
     width: 20%;
     background-color: var(--primary);
@@ -293,13 +297,12 @@ body {
     -webkit-transition: all ease-in 100ms;
     font-size: large;
 }
-.search_button:hover{
+.search_button:hover {
     background-color: var(--secondary);
     color: var(--primary);
     cursor: pointer;
-
 }
-.search_form{
+.search_form {
     border: none;
     outline: none;
     width: 100%;
@@ -307,33 +310,37 @@ body {
 /*----------------------------------------------------------------------------------------*/
 /*                                      result area                                       */
 /*----------------------------------------------------------------------------------------*/
-.result_area_holder{
+.result_area_holder {
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
+    margin-top: 20px;
+    height: 400px;
 }
-.client_not_found{
+.client_not_found {
     align-self: center;
     font-family: "Poppins", sans-serif;
     color: var(--primary-font-color);
 }
-.client_view{
+.client_view {
     margin-top: 10px;
+    margin-bottom: 10px;
     width: calc(60% + 50px);
     display: flex;
     align-items: center;
-    box-shadow: 0px 0px 40px #807f7f6e;
+    border: 2px solid var(--primary);
     align-self: center;
     border-radius: 16px;
 }
-.client_profile_icon{
+.client_profile_icon {
     margin: 10px;
     width: 90px;
     height: 90px;
     border-radius: 100%;
     background-color: var(--primary);
 }
-.personal_info{
+.personal_info {
     display: flex;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
@@ -342,9 +349,36 @@ body {
     justify-content: space-evenly;
     align-items: stretch;
 }
-.personal_info h5{
-
+.personal_info h5 {
     margin: 5px;
+}
+.more_details_button_holder {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 50px;
+}
+.more_details_button {
+    line-height: 30px;
+    width: 120px;
+    text-align: center;
+    background-color: var(--primary);
+    color: var(--white);
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    border-radius: 3px;
+    transition: all ease-in 100ms;
+    -o-transition: all ease-in 100ms;
+    -moz-transition: all ease-in 100ms;
+    -webkit-transition: all ease-in 100ms;
+    font-size: small;
+}
+.more_details_button:hover {
+    background-color: var(--secondary);
+    color: var(--primary);
+    cursor: pointer;
 }
 /*-------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -355,13 +389,11 @@ body {
 /*----------------------------------------------------------------------------------------*/
 /*                                      form element                                      */
 /*----------------------------------------------------------------------------------------*/
-.add_new_client_form{
+.add_new_client_form {
     display: flex;
     flex-direction: column;
-
-
 }
-.add_new_client_form_holder{
+.add_new_client_form_holder {
     margin-top: 100px;
     display: flex;
     width: 50%;
@@ -373,7 +405,7 @@ body {
     border-radius: 8px;
 }
 
-.add_client_button_submit{
+.add_client_button_submit {
     width: 20%;
     color: var(--white-font-color);
     align-self: center;
@@ -394,13 +426,13 @@ body {
     border: 2px transparent solid;
     text-decoration: none;
 }
-.add_client_button_submit:hover{
+.add_client_button_submit:hover {
     background-color: var(--primary-background);
     color: var(--primary);
-    border: 2px  var(--primary) solid;
+    border: 2px var(--primary) solid;
 }
 
-.normal_field{
+.normal_field {
     background-color: var(--light);
     text-decoration: none;
     outline: none;
@@ -410,12 +442,11 @@ body {
     border-bottom: 2px solid var(--primary);
     color: var(--black);
     font-family: "Poppins", sans-serif;
-    font-size:  medium;
+    font-size: medium;
 }
-.add_new_client_form label{
+.add_new_client_form label {
     margin-top: 10px;
     color: var(--primary);
     font-family: "Poppins", sans-serif;
-    font-size:  medium;
+    font-size: medium;
 }
-

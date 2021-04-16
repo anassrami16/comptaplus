@@ -69,7 +69,29 @@
                                 <h5>tel: ${client.tel}</h5>
                                 <h5>entreprise: ${client.compname}</h5>
                             </div>
+                            <div class="more_details_button_holder">
+                                <a href="#" class="more_details_button">plus de details</a>
+                            </div>
                         </div>
+                    </c:when>
+
+                    <c:when test="${ALL_CLIENT}">
+                        <c:forEach var="client" items="${clients}">
+                            <div class="client_view">
+                                <div class="client_profile_icon"></div>
+                                <div class="personal_info">
+                                    <h5>nom: ${client.fname}</h5>
+                                    <h5>prénom: ${client.lname}</h5>
+                                </div>
+                                <div class="personal_info">
+                                    <h5>tel: ${client.tel}</h5>
+                                    <h5>entreprise: ${client.compname}</h5>
+                                </div>
+                                <div class="more_details_button_holder">
+                                    <a href="#" class="more_details_button">plus de details</a>
+                                </div>
+                            </div>
+                        </c:forEach>
                     </c:when>
                 </c:choose>
 
