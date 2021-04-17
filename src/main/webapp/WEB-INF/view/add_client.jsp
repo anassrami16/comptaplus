@@ -34,22 +34,34 @@
         <div class="add_new_client_form_holder">
             <form action="" method="POST" class="add_new_client_form" id="add_new_client_form">
 
-                <label for="client_fname_field">nom</label>
-                <input type="text" id="client_fname_field" name="client_fname" class="normal_field" >
+                <div class="input_section">
+                    <div class="field_holder"><label for="ice" >ICE: </label><input type="text" id="ice" name="ice" class="normal_field"></div>
+                    <div class="field_holder"><label for="tp" >TP: </label><input type="text" id="tp" name="tp" class="normal_field"></div>
+                    <div class="field_holder"><label for="cif" >CIF: </label><input type="text" id="cif" name="cif" class="normal_field"></div>
+                </div>
 
-                <label for="client_lname_field">prénom</label>
-                <input type="text" id="client_lname_field" name="client_lname" class="normal_field">
+                <div class="input_section">
+                    <div class="field_holder"><label for="debut_act" >Debut Activité: </label><input type="date" id="debut_act" name="debut_act" class="normal_field"></div>
+                    <div class="field_holder"><label for="reg_com" >registre commerse: </label><input type="text" id="reg_com" name="reg_com" class="normal_field"></div>
+                    <div class="field_holder"><label for="aff_cnss" >affiliation cnss: </label><input type="text" id="aff_cnss" name="aff_cnss" class="normal_field"></div>
+                </div>
 
-                <label for="client_entreprise_field">entreprise</label>
-                <input type="text" id="client_entreprise_field" name="client_entreprise" class="normal_field">
+                <div class="input_section">
+                    <div class="field_holder"><label for="email" >email: </label><input type="email" id="email" name="email" class="normal_field"></div>
+                    <div class="field_holder"><label for="ville" >Ville: </label><input type="tel" id="ville" name="ville" class="normal_field"> </div>
+                    <div class="field_holder"><label for="adrs" >Adresse: </label><input type="text" id="adrs" name="adrs" class="normal_field"></div>
+                </div>
+                <div class="lone_input_section">
+                    <div class="field_holder"><label for="rais_soc" >raison socialle</label><input type="text" id="rais_soc" name="rais_soc" class="normal_field"></div>
+                    <div class="field_holder"><label for="tel" >tel: </label><input type="tel" id="tel" name="tel" class="normal_field"></div>
 
-                <label for="client_tel_field">tel</label>
-                <input type="tel" id="client_tel_field" name="client_tel" class="normal_field">
-
-                <label for="client_cin_field">nom</label>
-                <input type="text" id="client_cin_field" name="client_cin" class="normal_field">
+                </div>
 
                 <button type="submit" form="add_new_client_form" class="add_client_button_submit">Ajouter</button>
+                <h2>${message}</h2>
+                <input type="hidden"
+                       name="${_csrf.parameterName}"
+                       value="${_csrf.token}"/>
             </form>
         </div>
 

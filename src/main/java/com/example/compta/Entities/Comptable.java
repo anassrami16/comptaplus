@@ -9,7 +9,7 @@ import java.util.Set;
 public class Comptable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comptable_id")
     private Integer comptable_id;
 
@@ -20,9 +20,18 @@ public class Comptable {
 
     @OneToMany(fetch = FetchType.LAZY , mappedBy = "comptable" , cascade = CascadeType.ALL)
     private List<Client> clients;
+
+    @OneToMany(fetch = FetchType.LAZY , mappedBy = "comptable" , cascade = CascadeType.ALL)
+    private List<ClientPersoneMoral> clientPersoneMorals;
+
+
+
     public Integer getComptable_id() {
         return comptable_id;
     }
+
+
+
 
     public void setComptable_id(Integer comptable_id) {
         this.comptable_id = comptable_id;

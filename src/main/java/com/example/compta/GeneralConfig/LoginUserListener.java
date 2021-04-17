@@ -31,5 +31,6 @@ public class LoginUserListener implements ApplicationListener<AuthenticationSucc
         }
 
         session.setAttribute("COMPTABLE_ID" , comptableRepo.getByemail(username).getComptable_id());
+        session.setAttribute("COMPTABLE",comptableRepo.getByemail(username));
     }
 }
