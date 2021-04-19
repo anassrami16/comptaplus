@@ -40,23 +40,31 @@
             <form action="${pageContext.request.contextPath}/dashboard/add_client_person_moral" method="POST" class="add_new_client_form" id="add_new_client_form_1">
 
                 <div class="input_section">
-                    <div class="field_holder"><label for="ice" >ICE: </label><input type="text" id="ice" name="ice" class="normal_field"></div>
-                    <div class="field_holder"><label for="tp" >TP: </label><input type="text" id="tp" name="tp" class="normal_field"></div>
-                    <div class="field_holder"><label for="_if" >CIF: </label><input type="text" id="_if" name="_if" class="normal_field"></div>
+                    <div class="field_holder"><label for="rais_soc" >raison socialle</label><input type="text" id="rais_soc" name="rais_soc" class="normal_field"></div>
+                    <div class="field_holder"><label for="ville" >Ville: </label><input type="text" id="ville" name="ville" class="normal_field"> </div>
+                    <div class="field_holder"><label for="adrs" >Adresse: </label><input type="text" id="adrs" name="adrs" class="normal_field"></div>
+
+
+
                 </div>
                 <div class="input_section">
                     <div class="field_holder"><label for="debut_act" >Debut Activité: </label><input type="date" id="debut_act" name="debut_act" class="normal_field"></div>
-                    <div class="field_holder"><label for="reg_com" >registre commerse: </label><input type="text" id="reg_com" name="reg_com" class="normal_field"></div>
-                    <div class="field_holder"><label for="aff_cnss" >affiliation cnss: </label><input type="text" id="aff_cnss" name="aff_cnss" class="normal_field"></div>
+                    <div class="field_holder"><label for="tp" >TP: </label><input type="text" id="tp" name="tp" class="normal_field"></div>
+                    <div class="field_holder"><label for="_if" >IF: </label><input type="text" id="_if" name="_if" class="normal_field"></div>
+
                 </div>
 
                 <div class="input_section">
+                    <div class="field_holder"><label for="reg_com" >registre commerse: </label><input type="text" id="reg_com" name="reg_com" class="normal_field"></div>
+                    <div class="field_holder"><label for="ice" >ICE: </label><input type="text" id="ice" name="ice" class="normal_field"></div>
+
+
                     <div class="field_holder"><label for="email" >email: </label><input type="email" id="email" name="email" class="normal_field"></div>
-                    <div class="field_holder"><label for="ville" >Ville: </label><input type="text" id="ville" name="ville" class="normal_field"> </div>
-                    <div class="field_holder"><label for="adrs" >Adresse: </label><input type="text" id="adrs" name="adrs" class="normal_field"></div>
+
+
                 </div>
                 <div class="input_section">
-                    <div class="field_holder"><label for="rais_soc" >raison socialle</label><input type="text" id="rais_soc" name="rais_soc" class="normal_field"></div>
+                    <div class="field_holder"><label for="aff_cnss" >affiliation cnss: </label><input type="text" id="aff_cnss" name="aff_cnss" class="normal_field"></div>
                     <div class="field_holder"><label for="tel" >tel: </label><input type="tel" id="tel" name="tel" class="normal_field"></div>
                     <div class="field_holder"><label  ></label><input type="hidden" class="normal_field"></div>
                 </div>
