@@ -19,10 +19,12 @@ public class Comptable {
     private String passwd;
 
     @OneToMany(fetch = FetchType.LAZY , mappedBy = "comptable" , cascade = CascadeType.ALL)
-    private List<Client> clients;
+    private List<ClientGenerale> clientGenerales;
 
     @OneToMany(fetch = FetchType.LAZY , mappedBy = "comptable" , cascade = CascadeType.ALL)
-    private List<ClientPersoneMoral> clientPersoneMorals;
+    private List<Client> clients;
+
+
 
 
 

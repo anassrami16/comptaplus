@@ -18,6 +18,7 @@ public class Client {
     private String compname;
     private String cin;
     private String tel;
+
     @ManyToOne(fetch = FetchType.LAZY , optional = false)
     @JoinColumn(name = "comptable_id" , nullable = false)
     private Comptable comptable;
